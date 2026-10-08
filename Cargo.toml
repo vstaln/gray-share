@@ -1,0 +1,17 @@
+[package]
+name = "gray-share"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.91"
+license = "MIT"
+description = "Export a gray session transcript to a self-contained dark HTML page"
+
+[[bin]]
+name = "gray-share"
+path = "src/main.rs"
+
+[dependencies]
+serde_json = "1"
+
+[profile.release]
+strip = true
