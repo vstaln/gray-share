@@ -1,12 +1,17 @@
-# gray-share
+<p align="center">
+  <img src="assets/gray-logo.svg" alt="gray" width="96">
+</p>
+<h1 align="center">gray-share</h1>
+<p align="center">Export gray session transcripts as self-contained HTML.</p>
+<p align="center">
+  <a href="https://github.com/vstaln/gray-share/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <img alt="gray plugin" src="https://img.shields.io/badge/gray-plugin-7aa2f7.svg">
+  <img alt="rust" src="https://img.shields.io/badge/built%20with-rust-orange.svg">
+</p>
 
-Export a gray session transcript to **one self-contained HTML file** —
-dark theme, monospace, role-colored `user`/`assistant`/`system` entries,
-tool calls shown with their name and collapsible `<details>` args/results.
-No external assets, no network. Original work (no upstream plugin).
-
-A sidecar plugin for [gray](https://github.com/vstaln/gray), scaffolded by
-[gray-account](https://github.com/vstaln/gray-account).
+Write a session transcript to one dark, monospace HTML file: role-colored
+`user`/`assistant`/`system` entries and collapsible tool-call details, with
+no external assets or network dependencies.
 
 ## Usage
 
@@ -15,14 +20,14 @@ A sidecar plugin for [gray](https://github.com/vstaln/gray), scaffolded by
   calling session, else the newest transcript). Writes
   `~/.gray/share/<sid>-<unix-ts>.html` (or `out`) and replies
   `wrote <path> (<kb> KB)`.
-- `/share [sid]` — same export from the TUI.
+- `/share [sid]` — export from the TUI.
 - `/share list` — list existing exports.
 
 Transcripts are only read, never modified.
 
 ## Wire methods
 
-`plugin/manifest`, `plugin/shutdown`, `tool/call` (`share`),
+`plugin/manifest`, `plugin/shutdown`, `tool/call` (`share`), and
 `command/run` (`/share`). Protocol 1.1 — no hooks, no host capabilities.
 
 ## Install
@@ -41,3 +46,7 @@ gray account publish    # check → build → release → publish to the gray re
 
 Bump `version` in `Cargo.toml` before each `publish`; the registry refuses to
 republish a version.
+
+---
+Part of the [gray](https://github.com/vstaln/gray) plugin ecosystem —
+the open-source AI agent harness. <https://gray.alignment.id>

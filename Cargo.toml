@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 rust-version = "1.91"
 license = "MIT"
-description = "Export a gray session transcript to a self-contained dark HTML page"
+description = "Export gray session transcripts as self-contained HTML"
 
 [[bin]]
 name = "gray-share"

@@ -1,12 +1,12 @@
 //! gray-share — export a session transcript to one self-contained HTML file.
 //!
-//! Original work (no upstream). The `share` tool {session?, out?} and the
-//! `/share [sid]` command find a transcript under `~/.gray/sessions/`
-//! (`<sid>*.jsonl`, prefix match; default is the current session or the
-//! newest file) and render it to `~/.gray/share/<sid>-<ts>.html` — dark
-//! theme, monospace, role-colored user/assistant/tool entries, tool args in
-//! collapsible `<details>`, no external assets. `/share list` shows the
-//! existing exports. The transcript file is only ever read, never written.
+//! The `share` tool {session?, out?} and the `/share [sid]` command find a
+//! transcript under `~/.gray/sessions/` (`<sid>*.jsonl`, prefix match;
+//! default is the current session or the newest file) and render it to
+//! `~/.gray/share/<sid>-<ts>.html` — dark theme, monospace, role-colored
+//! user/assistant/tool entries, tool args in collapsible `<details>`, no
+//! external assets. `/share list` shows existing exports. The transcript
+//! file is only ever read, never written.
 
 use std::io::{BufRead, Write};
 use std::path::{Path, PathBuf};
