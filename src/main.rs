@@ -30,6 +30,7 @@ fn manifest() -> Value {
             }
         }],
         "commands": ["/share"],
+        "command_descriptions": {"/share": "export a session to an HTML file"},
     })
 }
 
